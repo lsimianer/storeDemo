@@ -186,10 +186,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./components/HookCounter.js":
-/*!***********************************!*\
-  !*** ./components/HookCounter.js ***!
-  \***********************************/
+/***/ "./components/HookCounterTwo.js":
+/*!**************************************!*\
+  !*** ./components/HookCounterTwo.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -197,43 +197,71 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/lukassimianer/jovio_workspace/storeDemo/storeapp/frontend/components/HookCounter.js";
+var _jsxFileName = "/Users/lukassimianer/jovio_workspace/storeDemo/storeapp/frontend/components/HookCounterTwo.js";
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var HookCounter = function HookCounter() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
+function HookCounterTwo() {
+  var initialCount = 0;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialCount),
       _useState2 = _slicedToArray(_useState, 2),
       count = _useState2[0],
       setCount = _useState2[1];
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, "Count: ", count, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setCount(initialCount);
     },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 12
+    }
+  }, "Reset"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return setCount(count + 1);
     },
+    __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11,
+      columnNumber: 12
+    }
+  }, "Increment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setCount(count - 1);
     },
-    __self: this
-  }, "Count ", count, " "));
-};
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 12
+    }
+  }, "Decrement"));
+}
 
-/* harmony default export */ __webpack_exports__["default"] = (HookCounter);
+/* harmony default export */ __webpack_exports__["default"] = (HookCounterTwo);
 
 /***/ }),
 
@@ -249,8 +277,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_ClassCounter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ClassCounter */ "./components/ClassCounter.js");
-/* harmony import */ var _components_HookCounter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HookCounter */ "./components/HookCounter.js");
-var _jsxFileName = "/Users/lukassimianer/jovio_workspace/storeDemo/storeapp/frontend/pages/index.js";
+/* harmony import */ var _components_HookCounterTwo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HookCounterTwo */ "./components/HookCounterTwo.js");
+var _this = undefined,
+    _jsxFileName = "/Users/lukassimianer/jovio_workspace/storeDemo/storeapp/frontend/pages/index.js";
+
 
 
  // class Home extends React.Component {
@@ -260,24 +290,27 @@ var _jsxFileName = "/Users/lukassimianer/jovio_workspace/storeDemo/storeapp/fron
 // }
 
 var Home = function Home(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      lineNumber: 11,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, "Hey!, I'm Alive bro!!!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HookCounter__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, "Hey!, I'm Alive bro!!!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HookCounterTwo__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
+      lineNumber: 14,
+      columnNumber: 9
+    }
   }));
 };
 
